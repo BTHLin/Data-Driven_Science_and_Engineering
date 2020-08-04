@@ -217,14 +217,14 @@ def get_weather_data(Database, server_address, user_account, user_password, Tabl
 			print('No Data on %s'%target_date)
 
 def main():
-	Database 	     = '' # database name
-  server_address = '' # server address
-  user_account   = '' # server account ID
-  user_password  = '' # server password
-	Table_Name 	   = 'Weather_data' # table name
+	Database       = '' # database name
+	server_address = '' # server address
+	user_account   = '' # server account ID
+	user_password  = '' # server password
+	Table_Name     = 'Weather_data' # table name
 	format_table   = True # change to False if saving data to an existing table
 	start_date     = datetime.today() - timedelta(days = 1) # auto update or selecting an specific date, datetime(2018,5,14)
-	end_date 	     = datetime.today()              # auto update or selecting an specific date, datetime.datetime(2020,1,10) 
+	end_date       = datetime.today() # auto update or selecting an specific date, datetime.datetime(2020,1,10) 
 
 	get_weather_data(Database, server_address, user_account, user_password, Table_Name, start_date, end_date, format_table)
 
